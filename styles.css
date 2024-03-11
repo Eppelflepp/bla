@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light gray background */
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    text-align: center;
+    background-color: #ffffff; /* White container background */
+    border-radius: 10px;
+    padding: 40px; /* Increased padding */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333333; /* Dark gray color */
+    font-size: 36px; /* Increased font size */
+}
+
+#lesson-status {
+    font-size: 24px;
+    color: #F5B041;
+    margin-top: 30px;
+}
+
+.footer {
+    background-color: #333333; /* Dark gray background for footer */
+    color: #ffffff; /* White text color */
+    padding: 20px 0; /* Increased padding */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}
+
+.footer p {
+    text-align: right;
+    margin: 0;
+    padding-right: 5%;
+}
+
+.footer a {
+    color: #ffffff; /* White color for links */
+    text-decoration: underline;
+}
+
+.lesson-on {
+    background-color: #caffbf; /* Light green background when lesson is happening */
+}
+
+.lesson-off {
+    background-color: #ffbcbc; /* Light red background when there's no lesson */
+}
