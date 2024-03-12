@@ -29,7 +29,7 @@ getDoc(lessonRef).then((snapshot) => {
         lessonData.isLessonOn ? document.getElementById("details").textContent = lessonData.details : document.getElementById("details").textContent = ""
 
         // LastModified over de BLA
-        document.getElementById("dateModified").textContent = "Laatst geupdate: " + lessonData.lastModified.toDate().toDateString();
+        document.getElementById("dateModified").textContent = "Laatst geupdate: " + lessonData.lastModified.toDate().toLocaleDateString('nl-NL', {weekday: 'long', month: 'numeric', day: 'numeric', year: 'numeric'});
 
         // Update background color based on lesson status
         if (lessonData.isLessonOn) {
