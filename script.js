@@ -9,7 +9,7 @@ const firebaseConfig = {
     storageBucket: "bla-site.appspot.com",
     messagingSenderId: "849249702041",
     appId: "1:849249702041:web:575c075fc07d720a92e808"
-  };
+};
 
 // Initialize Firebase app
 const firebaseApp = initializeApp(firebaseConfig);
@@ -36,6 +36,17 @@ getDoc(lessonRef).then((snapshot) => {
             document.body.classList.add("lesson-on");
         } else {
             document.body.classList.add("lesson-off");
+        }
+
+        // Update meta tags for Discord and WhatsApp previews
+        const metaTags = document.getElementsByTagName("meta");
+        for (let i = 0; i < metaTags.length; i++) {
+            if (metaTags[i].getAttribute("property") === "og:title") {
+                metaTags[i].setAttribute("content", lessonStatus);
+            }
+            if (metaTags[i].getAttribute("property") === "og:description") {
+                metaTags[i].setAttribute("content", lessonData.details);
+            }
         }
     } else {
         console.log("No such document!");
