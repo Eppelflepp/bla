@@ -37,17 +37,7 @@ getDoc(lessonRef).then((snapshot) => {
         } else {
             document.body.classList.add("lesson-off");
         }
-
-        // Update meta tags for Discord and WhatsApp previews
-        const metaTags = document.getElementsByTagName("meta");
-        for (let i = 0; i < metaTags.length; i++) {
-            if (metaTags[i].getAttribute("property") === "og:title") {
-                metaTags[i].setAttribute("content", lessonStatus);
-            }
-            if (metaTags[i].getAttribute("property") === "og:description") {
-                metaTags[i].setAttribute("content", lessonData.details);
-            }
-        }
+        
     } else {
         console.log("No such document!");
     }
